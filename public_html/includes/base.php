@@ -19,3 +19,57 @@ require("cphp/base.php");
 
 require("lib/Markdown.php");
 require("lib/MarkdownExtra.php");
+
+NewTemplater::RegisterVariableHook("errors", "get_errors");
+NewTemplater::RegisterVariableHook("notices", "get_notices");
+
+function get_errors($fetch)
+{
+	if(isset($_SESSION['errors']))
+	{
+		$errors = $_SESSION['errors'];
+		
+		if($fetch === true)
+		{
+			/* We only want to clear out errors if a call to
+			 * actually retrieve the errors was made, not just
+			 * something like an isempty. */
+			$_SESSION['errors'] = array();
+		}
+		
+		return $errors;
+	}
+	else
+	{
+		return array();
+	}
+}
+
+function get_notices($fetch)
+{
+	if(isset($_SESSION['notices']))
+	{
+		$notices = $_SESSION['notices'];
+		
+		if($fetch === true)
+		{
+			$_SESSION['notices'] = array();
+		}
+		
+		return $notices;
+	}
+	else
+	{
+		return array();
+	}
+}
+
+function flash_error($message)
+{
+	$_SESSION['errors'][] = $message;
+}
+
+function flash_notice($message)
+{
+	$_SESSION['notices'][] = $message;
+}
