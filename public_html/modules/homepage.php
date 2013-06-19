@@ -11,32 +11,8 @@
  * licensing text.
  */
 
-$_APP = true;
-require("includes/base.php");
+if(!isset($_APP)) { die("Unauthorized."); }
 
-$sPageTitle = "";
-$sPageContents = "";
+/* TODO: Have a dynamic homepage rather than a static one. */
 
-$router = new CPHPRouter();
-
-$router->allow_slash = true;
-$router->ignore_query = true;
-
-$router->routes = array(
-	0 => array(
-		"^/$"		=> "modules/homepage.php",
-		"^/(.*)$"	=> "modules/page.php"
-	)
-);
-
-try
-{
-	$router->RouteRequest();
-}
-catch (RouterException $e)
-{
-	http_status_code(404);
-	die("404 Not Found");
-}
-
-echo($sPageContents); 
+$sPageContents = NewTemplater::Render("homepage", $locale->strings, array());

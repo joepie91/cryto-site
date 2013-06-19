@@ -11,32 +11,15 @@
  * licensing text.
  */
 
-$_APP = true;
-require("includes/base.php");
-
-$sPageTitle = "";
-$sPageContents = "";
-
-$router = new CPHPRouter();
-
-$router->allow_slash = true;
-$router->ignore_query = true;
-
-$router->routes = array(
-	0 => array(
-		"^/$"		=> "modules/homepage.php",
-		"^/(.*)$"	=> "modules/page.php"
-	)
-);
+if(!isset($_APP)) { die("Unauthorized."); }
 
 try
 {
-	$router->RouteRequest();
+	$sPage = Page::CreateFromQuery("SELECT * FROM pages WHERE `Slug` = :Slug", array(":Slug" => $router->uParameters[1]), 60, true);
 }
-catch (RouterException $e)
+catch (NotFoundException $e)
 {
-	http_status_code(404);
-	die("404 Not Found");
+	throw new RouterException("Page does not exist.");
 }
 
-echo($sPageContents); 
+$sPageContents = Michelf\MarkdownExtra::defaultTransform($sPage->uBody);

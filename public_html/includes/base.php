@@ -16,3 +16,6 @@ if(!isset($_APP)) { die("Unauthorized."); }
 $_CPHP = true;
 $_CPHP_CONFIG = "../config.json";
 require("cphp/base.php");
+
+require("lib/Markdown.php");
+require("lib/MarkdownExtra.php");
