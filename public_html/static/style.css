@@ -152,6 +152,29 @@ div.notice-three
 	text-align: right;
 }
 
+div.error
+{
+	border: 1px solid #5D0000;
+	background-color: #E2C6C6;
+	margin-top: 8px;
+	margin-bottom: 6px;
+	font-size: 15px;
+	padding: 8px 10px;
+}
+
+div.error ul
+{
+	padding-left: 28px;
+	margin: 3px 0px;
+}
+
+div.error p
+{
+	margin: 3px 0px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
 .login
 {
 	float: right;

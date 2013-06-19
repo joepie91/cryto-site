@@ -11,12 +11,6 @@
 				<h2>Home</h2>
 			</div>
 			<div class="menu">
-				<a href="/">Home</a>
-				<a href="/projects/">Projects</a>
-				<a href="/guides/">Guides</a>
-				<a href="/mirrors/">Mirrors</a>
-				<a href="/irc/">IRC</a>
-				<a href="/donate/">Donate</a>
 				<div class="login">
 					<form method="post" action="/login">
 						<input type="text" name="username" placeholder="Username">
@@ -24,8 +18,24 @@
 						<button type="submit">Login</button>
 					</form>
 				</div>
+				<a href="/">Home</a>
+				<a href="/projects/">Projects</a>
+				<a href="/guides/">Guides</a>
+				<a href="/mirrors/">Mirrors</a>
+				<a href="/irc/">IRC</a>
+				<a href="/donate/">Donate</a>
 			</div>
 			<div class="content">
+				{%if isempty|errors == false}
+					<div class="error">
+						<p>One or more errors occurred:</p>
+						<ul>
+							{%foreach error in errors}
+								<li>{%?error}</li>
+							{%/foreach}
+						</ul>
+					</div>
+				{%/if}
 				{%?contents}
 			</div>
 			<div class="footer">
