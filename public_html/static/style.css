@@ -151,3 +151,29 @@ div.notice-three
 	margin-top: 2px;
 	text-align: right;
 }
+
+.login
+{
+	float: right;
+	margin-top: -4px;
+}
+
+.login input, .login button
+{
+	font-size: 13px;
+}
+
+.login input
+{
+	width: 105px;
+	padding: 2px 3px;
+	border: 1px solid gray;
+	border-radius: 2px;
+}
+
+.login button
+{
+	border: 1px solid gray;
+	padding: 2px 6px;
+	border-radius: 2px;
+}

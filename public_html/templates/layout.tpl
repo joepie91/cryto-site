@@ -17,6 +17,13 @@
 				<a href="/mirrors/">Mirrors</a>
 				<a href="/irc/">IRC</a>
 				<a href="/donate/">Donate</a>
+				<div class="login">
+					<form method="post" action="/login">
+						<input type="text" name="username" placeholder="Username">
+						<input type="password" name="password" placeholder="Password">
+						<button type="submit">Login</button>
+					</form>
+				</div>
 			</div>
 			<div class="content">
 				{%?contents}
