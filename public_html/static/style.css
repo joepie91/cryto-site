@@ -1,0 +1,153 @@
+html, body
+{
+	font-family: Arial, Verdana;
+	background-color: #EDEDED;
+}
+
+div.wrapper
+{
+	width: 900px;
+	margin: 0px auto;
+	background-image: url(http://tahoe-gateway.cryto.net:3719/download/VVJJOkNISzp1a3R4YmRkZ3M3djZubGV2Y2N5dW1obHA2NDpjMzdzZ2lpN2h6NHFiNWlneGZnb2YyNWp3NXlrZXp5azZoaGt2MjV1eTYydDVkNjdvd21xOjM6NjoyNjk3MA==/cubes.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+div.header
+{
+	margin: 0px 5px;
+	margin-bottom: 8px;
+	border-bottom: 3px solid #2B2B2B;
+	margin-right: 175px;
+}
+
+div.header h1, h2
+{
+	display: inline;
+	color: #2B2B2B;
+}
+
+div.header h2
+{
+	margin-left: 25px;
+	color: #696969;
+}
+
+div.menu
+{
+	margin: 0px 5px;
+	background-color: black;
+	padding: 3px;
+	padding-top: 5px;
+	margin-right: 175px;
+}
+
+div.menu a
+{
+	font-size: 13px;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	padding: 4px;
+}
+
+div.menu a:hover
+{
+	color: black;
+	background-color: #EDEDED;
+}
+
+div.content
+{
+	margin: 0px 9px;
+	margin-right: 202px;
+	text-align: justify;
+}
+
+div.content h3
+{
+	margin-bottom: 2px;
+}
+
+div.content p
+{
+	margin-top: 7px;
+	margin-bottom: 10px;
+}
+
+div.content table, div.content th, div.content td
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+div.content table
+{
+	margin: 0px auto;
+}
+
+div.content th, div.content td
+{
+	padding: 2px 5px;
+}
+
+div.content th
+{
+	text-align: left;
+}
+
+div.content table.no-border, div.content table.no-border th, div.content table.no-border td
+{
+	border: 0px solid transparent;
+	margin: 0px;
+	padding-right: 13px;
+	padding-left: 0px;
+}
+
+div.content h2
+{
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+div.footer
+{
+	border-top: 2px solid #2B2B2B;
+	padding-top: 3px;
+	margin: 0px 5px;
+	margin-top: 13px;
+	font-size: 11px;
+	background-color: #EDEDED;
+}
+
+pre.bash, div.notice
+{
+	border: 1px dashed black;
+	margin: 0px;
+	padding: 2px 5px;
+	background-color: #F1F1F1;
+}
+
+div.notice
+{
+	margin-top: 9px;
+}
+
+div.notice-one, div.notice-three
+{
+	font-size: 19px;
+	font-weight: bold;
+}
+
+div.notice-two
+{
+	font-size: 31px; 
+	font-weight: bold;
+	text-align: center;
+}
+
+div.notice-three
+{
+	margin-top: 2px;
+	text-align: right;
+}
