@@ -25,6 +25,10 @@ $router->ignore_query = true;
 $router->routes = array(
 	0 => array(
 		"^/$"		=> "modules/homepage.php",
+		"^/login$"	=> array(
+			"target"	=> "modules/login.php",
+			"methods"	=> "post"
+		),
 		"^/(.*)$"	=> "modules/page.php"
 	)
 );
