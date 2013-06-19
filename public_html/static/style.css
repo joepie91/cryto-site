@@ -4,6 +4,11 @@ html, body
 	background-color: #EDEDED;
 }
 
+body
+{
+	margin: 8px;
+}
+
 div.wrapper
 {
 	width: 900px;
@@ -178,7 +183,7 @@ div.error p
 .login
 {
 	float: right;
-	margin-top: -4px;
+	margin-top: -2px;
 }
 
 .login input, .login button

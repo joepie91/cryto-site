@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Cryto Coding Collective :: {%?title}</title>
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
 		<link rel="stylesheet" type="text/css" href="/static/style.css">
 	</head>
 	<body>
