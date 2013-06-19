@@ -39,4 +39,7 @@ catch (RouterException $e)
 	die("404 Not Found");
 }
 
-echo($sPageContents); 
+echo(NewTemplater::Render("layout", $locale->strings, array(
+	"title"		=> $sPageTitle,
+	"contents"	=> $sPageContents
+)));
