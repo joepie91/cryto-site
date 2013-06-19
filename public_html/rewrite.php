@@ -16,6 +16,7 @@ require("includes/base.php");
 
 $sPageTitle = "";
 $sPageContents = "";
+$sPageHeader = "";
 
 $router = new CPHPRouter();
 
@@ -29,6 +30,7 @@ $router->routes = array(
 			"target"	=> "modules/login.php",
 			"methods"	=> "post"
 		),
+		"^/register$"	=> "modules/register.php",
 		"^/(.*)$"	=> "modules/page.php"
 	)
 );
@@ -45,5 +47,6 @@ catch (RouterException $e)
 
 echo(NewTemplater::Render("layout", $locale->strings, array(
 	"title"		=> $sPageTitle,
+	"header"	=> $sPageHeader,
 	"contents"	=> $sPageContents
 )));

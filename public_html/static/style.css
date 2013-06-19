@@ -205,3 +205,22 @@ div.error p
 	padding: 2px 6px;
 	border-radius: 2px;
 }
+
+.pure-skin-cryto .pure-form input[type="text"],
+.pure-skin-cryto .pure-form input[type="password"],
+.pure-skin-cryto .pure-form input[type="email"],
+.pure-skin-cryto .pure-form input[type="url"],
+.pure-skin-cryto .pure-form input[type="date"],
+.pure-skin-cryto .pure-form input[type="month"],
+.pure-skin-cryto .pure-form input[type="time"],
+.pure-skin-cryto .pure-form input[type="datetime"],
+.pure-skin-cryto .pure-form input[type="datetime-local"],
+.pure-skin-cryto .pure-form input[type="week"],
+.pure-skin-cryto .pure-form input[type="number"],
+.pure-skin-cryto .pure-form input[type="search"],
+.pure-skin-cryto .pure-form input[type="tel"],
+.pure-skin-cryto .pure-form input[type="color"],
+.pure-skin-cryto .pure-form select,
+.pure-skin-cryto .pure-form textarea {
+    border: 1px solid #DADADA;
+}

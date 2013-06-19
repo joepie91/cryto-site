@@ -20,6 +20,24 @@ require("cphp/base.php");
 require("lib/Markdown.php");
 require("lib/MarkdownExtra.php");
 
+if(!empty($_SESSION['user_id']))
+{
+	try
+	{
+		$sCurrentUser = new User($_SESSION['user_id']);
+		NewTemplater::SetGlobalVariable("logged-in", true);
+	}
+	catch (NotFoundException $e)
+	{
+		NewTemplater::SetGlobalVariable("logged-in", false);
+		/* Pass */
+	}
+}
+else
+{
+	NewTemplater::SetGlobalVariable("logged-in", false);
+}
+
 NewTemplater::RegisterVariableHook("errors", "get_errors");
 NewTemplater::RegisterVariableHook("notices", "get_notices");
 

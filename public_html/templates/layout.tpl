@@ -3,21 +3,26 @@
 	<head>
 		<title>Cryto Coding Collective :: {%?title}</title>
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
+		<link rel="stylesheet" type="text/css" href="/static/pure.css">
 		<link rel="stylesheet" type="text/css" href="/static/style.css">
 	</head>
-	<body>
+	<body class="pure-skin-cryto">
 		<div class="wrapper">
 			<div class="header">
 				<h1>Cryto Coding Collective</h1>
-				<h2>Home</h2>
+				<h2>{%?header}</h2>
 			</div>
 			<div class="menu">
 				<div class="login">
-					<form method="post" action="/login">
-						<input type="text" name="username" placeholder="Username">
-						<input type="password" name="password" placeholder="Password">
-						<button type="submit">Login</button>
-					</form>
+					{%if logged-in == false}
+						<form method="post" action="/login">
+							<input type="text" name="username" placeholder="Username">
+							<input type="password" name="password" placeholder="Password">
+							<button type="submit">Login</button>
+						</form>
+					{%else}
+						You are already logged in.
+					{%/if}
 				</div>
 				<a href="/">Home</a>
 				<a href="/projects/">Projects</a>
